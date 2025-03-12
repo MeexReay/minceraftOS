@@ -5,13 +5,15 @@ You just boot on it and play minceraft in offline mode
 
 ## How to make iso file
 
-That's easy enough to understand it without instructions
+You need to do this from void linux!!1
 
 ```
 cd /tmp
 git clone https://github.com/MeexReay/minceraftOS
 cd minceraftOS
-sudo ./mkmine.sh
+./data/minceraft/UltimMC -l 1.21.4 # close minecraft when it's loaded
+cp data/minceraft/ultimmc.cfg.def data/minceraft/ultimmc.cfg
+sudo ./mkmine.sh # idk why, if you can fix it, please make a PR
 cd output
 ls # here has to be the iso file
 ```
