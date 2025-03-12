@@ -23,7 +23,7 @@ ls # here has to be the iso file
 First link in google bro
 
 ```
-sudo dd if=<input_file> of=<device_name>
+sudo dd if=<input_file> of=<device_name> status=progress
 ```
 
 ## How to play minceraft
