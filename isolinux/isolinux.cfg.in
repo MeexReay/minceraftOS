@@ -7,4 +7,4 @@ ONTIMEOUT linux
 LABEL linux
 MENU LABEL @@BOOT_TITLE@@ @@KERNVER@@ @@ARCH@@
 KERNEL /boot/vmlinuz
-APPEND initrd=/boot/initrd root=live:CDLABEL=VOID_LIVE init=/sbin/init ro rd.luks=0 rd.md=0 rd.dm=0 loglevel=4 vconsole.unicode=1 vconsole.keymap=@@KEYMAP@@ locale.LANG=@@LOCALE@@ @@BOOT_CMDLINE@@ live.autologin live.user=player quiet
+APPEND initrd=/boot/initrd root=live:CDLABEL=VOID_LIVE init=/sbin/init ro rd.luks=0 rd.md=0 rd.dm=0 loglevel=4 vconsole.unicode=1 vconsole.keymap=@@KEYMAP@@ locale.LANG=@@LOCALE@@ @@BOOT_CMDLINE@@ live.autologin live.user=player quiet splash

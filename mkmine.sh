@@ -31,7 +31,7 @@ umask 022
 MOSVER="$(cat version)"
 REQUIRED_PKGS=(base-files libgcc dash coreutils sed tar gawk squashfs-tools xorriso)
 TARGET_PKGS=(base-files)
-INITRAMFS_PKGS=(binutils xz device-mapper dhclient dracut-network openresolv plymouth xsetroot)
+INITRAMFS_PKGS=(binutils xz device-mapper fbv dhclient dracut-network openresolv plymouth xsetroot)
 PACKAGE_LIST=(bash openjdk21 xorg qt5 qt5-devel)
 IGNORE_PKGS=()
 PLATFORMS=()
@@ -269,7 +269,7 @@ EOF
         ENTRY_TITLE="${BOOT_TITLE}"
 
         write_entry "${ENTRY_TITLE}" "linux${id_sfx}" \
-            "$BOOT_CMDLINE $cmdline live.autologin live.user=player live.shell=/bin/bash quiet" "$dtb"
+            "$BOOT_CMDLINE $cmdline live.autologin live.user=player live.shell=/bin/bash quiet splash" "$dtb"
     }
 
     write_entries
