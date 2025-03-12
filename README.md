@@ -11,6 +11,8 @@ You need to do this from void linux!!1
 cd /tmp
 git clone https://github.com/MeexReay/minceraftOS
 cd minceraftOS
+./data/minceraft/UltimMC -l 1.21.4 # launches minecraft to test and download assets. close minecraft when it's loaded
+cp data/minceraft/ultimmc.cfg.def data/minceraft/ultimmc.cfg
 sudo ./mkmine.sh # idk why, if you can fix it, please make a PR
 cd output
 ls # here has to be the iso file
