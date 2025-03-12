@@ -1,0 +1,4 @@
+xsetroot -cursor_name arrow
+cd /home/player/minceraft
+export INST_JAVA=java
+exec ./UltimMC -n Steve -o -l 1.21.4
