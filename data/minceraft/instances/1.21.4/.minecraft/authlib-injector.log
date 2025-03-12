@@ -1,25 +1,6 @@
-Logging started at 2025-03-12T16:15:19.881952392Z
+Logging started at 2025-03-12T20:00:28.230448162Z
 [authlib-injector] [INFO] Version: 1.2.5
-[authlib-injector] [INFO] Authentication server: http://127.0.0.1:44095
+[authlib-injector] [INFO] Authentication server: http://127.0.0.1:43699
 [authlib-injector] [WARNING] You are using HTTP protocol, which is INSECURE! Please switch to HTTPS if possible.
 [authlib-injector] [INFO] Transformed [net.minecraft.client.main.Main] with [Main Arguments Transformer]
 [authlib-injector] [INFO] Transformed [com.mojang.authlib.properties.Property] with [Yggdrasil Public Key Transformer]
-[authlib-injector] [INFO] Transformed [com.mojang.authlib.HttpAuthenticationService] with [ConcatenateURL Workaround]
-[authlib-injector] [INFO] Httpd is running on port 37783
-[authlib-injector] [INFO] Transformed [com.mojang.authlib.yggdrasil.YggdrasilEnvironment] with [Constant URL Transformer]
-[authlib-injector] [INFO] Transformed [com.mojang.authlib.yggdrasil.YggdrasilServicesKeyInfo] with [Yggdrasil Public Key Transformer]
-[authlib-injector] [WARNING] An error occurred while processing request [/https/sessionserver.mojang.com/session/minecraft/profile/5627dd98e6be3c21b8a8e92344183641]
-java.io.UncheckedIOException: java.io.FileNotFoundException: http://127.0.0.1:44095/sessionserver/session/minecraft/profile/5627dd98e6be3c21b8a8e92344183641?unsigned=false
-	at moe.yushi.authlibinjector.yggdrasil.YggdrasilClient.queryProfile(YggdrasilClient.java:92)
-	at moe.yushi.authlibinjector.httpd.QueryProfileFilter.handle(QueryProfileFilter.java:82)
-	at moe.yushi.authlibinjector.httpd.URLProcessor$1.serve(URLProcessor.java:142)
-	at moe.yushi.authlibinjector.internal.fi.iki.elonen.HTTPSession.execute(HTTPSession.java:246)
-	at moe.yushi.authlibinjector.internal.fi.iki.elonen.NanoHTTPD$ClientHandler.run(NanoHTTPD.java:104)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: java.io.FileNotFoundException: http://127.0.0.1:44095/sessionserver/session/minecraft/profile/5627dd98e6be3c21b8a8e92344183641?unsigned=false
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:2009)
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1614)
-	at moe.yushi.authlibinjector.util.IOUtils.http(IOUtils.java:49)
-	at moe.yushi.authlibinjector.yggdrasil.YggdrasilClient.queryProfile(YggdrasilClient.java:90)
-	... 5 more
-
