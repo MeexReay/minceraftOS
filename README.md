@@ -3,6 +3,11 @@
 OS that uses Minceraft as Desktop Environment. \
 Now it only starts minceraft and do nothing.
 
+## Download iso file
+
+You can get iso file of latest version here: [Latest release](https://github.com/MeexReay/minceraftOS/releases/latest)
+But if you want to get all latest unstable changes and fixes, you need to build iso file yourself: [How to make iso file](https://github.com/MeexReay/minceraftOS#how-to-make-iso-file)
+
 ## How to make iso file
 
 You need to do this from Void Linux (because the script needs XBPS to build)!
