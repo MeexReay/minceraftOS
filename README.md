@@ -1,8 +1,7 @@
 # minceraftOS
 
 OS that uses Minceraft as Desktop Environment. \
-Now it only starts minceraft and do nothing. 
-
+Now it only starts minceraft and do nothing.
 
 ## How to make iso file
 
@@ -15,8 +14,9 @@ Load minceraft assets at first:
 cp data/minceraft/ultimmc.cfg.def data/minceraft/ultimmc.cfg
 ```
 
-Use `mkmine.sh` script to make ISO file. 
-Result will be in `output/` directory.
+Use `mkmine.sh` script to make ISO file. \
+Result will be in `output/` directory. \
+Script compiles it only for x86_64, but I think it's not really hard to make it compile for any other architecture
 
 ```
 sudo ./mkmine.sh # idk why it needs sudo, please pr if you know how to remove it
