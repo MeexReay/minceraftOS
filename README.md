@@ -21,7 +21,7 @@ cp data/minceraft/ultimmc.cfg.def data/minceraft/ultimmc.cfg
 
 Use `mkmine.sh` script to make ISO file. \
 Result will be in `output/` directory. \
-Script compiles it only for x86_64, but I think it's not really hard to make it compile for any other architecture
+Script compiles it only for x86_64, but I think it's not really hard to make it compile for any other architectures
 
 ```
 sudo ./mkmine.sh # idk why it needs sudo, please pr if you know how to remove it
