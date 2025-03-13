@@ -1,21 +1,25 @@
 # minceraftOS
 
-It is a small OS without installation scripts and other bullshit, only minecraft on startup \
-You just boot on it and play minceraft in offline mode
+OS that uses Minceraft as Desktop Environment. \
+Now it only starts minceraft and do nothing.
 
 ## How to make iso file
 
-You need to do this from void linux!!1
+You need to do this from Void Linux (because the script needs XBPS to build)!
+
+Load minceraft assets at first:
 
 ```
-cd /tmp
-git clone https://github.com/MeexReay/minceraftOS
-cd minceraftOS
 ./data/minceraft/UltimMC -l 1.21.4 # close minecraft when it's loaded
 cp data/minceraft/ultimmc.cfg.def data/minceraft/ultimmc.cfg
-sudo ./mkmine.sh # idk why, if you can fix it, please make a PR
-cd output
-ls # here has to be the iso file
+```
+
+Use `mkmine.sh` script to make ISO file. \
+Result will be in `output/` directory. \
+Script compiles it only for x86_64, but I think it's not really hard to make it compile for any other architecture
+
+```
+sudo ./mkmine.sh # idk why it needs sudo, please pr if you know how to remove it
 ```
 
 ## How to burn it on disk
