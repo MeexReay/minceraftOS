@@ -29,10 +29,10 @@ umask 022
 . ./lib.sh
 
 MOSVER="$(cat version)"
-REQUIRED_PKGS=(base-files libgcc dash coreutils sed tar gawk squashfs-tools xorriso)
-TARGET_PKGS=(base-files)
-INITRAMFS_PKGS=(binutils xz device-mapper fbv dhclient dracut-network openresolv plymouth xsetroot)
-PACKAGE_LIST=(bash openjdk21 xorg qt5 qt5-devel)
+REQUIRED_PKGS=(base-files libgcc plymouth dash coreutils sed tar gawk squashfs-tools xorriso)
+TARGET_PKGS=(base-files plymouth)
+INITRAMFS_PKGS=(binutils xz device-mapper fbv dhclient dracut-network openresolv xsetroot)
+PACKAGE_LIST=(bash openjdk21 xorg qt5 qt5-devel elogind plymouth)
 IGNORE_PKGS=()
 PLATFORMS=()
 readonly PROGNAME="$(basename "$0")"
@@ -109,6 +109,12 @@ post_install_packages() {
         echo "dm-raid" > "$ROOTFS"/etc/modules-load.d/dm-raid.conf
         break
     done
+
+    chroot "$ROOTFS" xbps-install -S plymouth
+    
+    install_plymouth
+
+    ls "$ROOTFS"/usr/bin
 }
 
 install_plymouth() {
@@ -125,7 +131,7 @@ install_packages() {
     LANG=C XBPS_TARGET_ARCH=$TARGET_ARCH "${XBPS_INSTALL_CMD}" -U -r "$ROOTFS" \
         ${XBPS_REPOSITORY} -c "$XBPS_CACHEDIR" -y "${PACKAGE_LIST[@]}" "${INITRAMFS_PKGS[@]}"
     [ $? -ne 0 ] && die "Failed to install ${PACKAGE_LIST[*]} ${INITRAMFS_PKGS[*]}"
-
+    
     xbps-reconfigure -r "$ROOTFS" -f base-files >/dev/null 2>&1
     chroot "$ROOTFS" env -i xbps-reconfigure -f base-files
 
@@ -166,6 +172,8 @@ enable_services() {
         fi
         ln -sf /etc/sv/$service $ROOTFS/etc/runit/runsvdir/default/
     done
+    ln -sf /etc/sv/plymouthd $ROOTFS/etc/runit/runsvdir/default/
+    ln -sf /etc/sv/elogind $ROOTFS/etc/runit/runsvdir/default/
 }
 
 change_shell() {
@@ -528,11 +536,11 @@ mkdir -p "$ROOTFS" "$VOIDHOSTDIR" "$VOIDTARGETDIR" "$GRUB_DIR" "$ISOLINUX_DIR"
 
 print_step "Synchronizing XBPS repository data..."
 copy_void_keys "$ROOTFS"
-XBPS_ARCH=$TARGET_ARCH $XBPS_INSTALL_CMD -r "$ROOTFS" ${XBPS_REPOSITORY} -S
+XBPS_ARCH=$TARGET_ARCH $XBPS_INSTALL_CMD -r "$ROOTFS" ${XBPS_REPOSITORY} -Sy
 copy_void_keys "$VOIDHOSTDIR"
-XBPS_ARCH=$HOST_ARCH $XBPS_INSTALL_CMD -r "$VOIDHOSTDIR" ${XBPS_REPOSITORY} -S
+XBPS_ARCH=$HOST_ARCH $XBPS_INSTALL_CMD -r "$VOIDHOSTDIR" ${XBPS_REPOSITORY} -Sy
 copy_void_keys "$VOIDTARGETDIR"
-XBPS_ARCH=$TARGET_ARCH $XBPS_INSTALL_CMD -r "$VOIDTARGETDIR" ${XBPS_REPOSITORY} -S
+XBPS_ARCH=$TARGET_ARCH $XBPS_INSTALL_CMD -r "$VOIDTARGETDIR" ${XBPS_REPOSITORY} -Sy
 
 # Get linux version for ISO
 # If linux version option specified use
@@ -637,6 +645,9 @@ mkdir -p "$ROOTFS"/usr/share/icons/default
 cp -r data/cursors "$ROOTFS"/usr/share/icons/default/cursors
 cp data/index.theme "$ROOTFS"/usr/share/icons/default/index.theme
 chmod -R 755 "$ROOTFS"/usr/share/icons/default/cursors
+
+cat "$ROOTFS"/etc
+cat "$ROOTFS"/etc/X11
 
 print_step "Cleaning up rootfs..."
 cleanup_rootfs
