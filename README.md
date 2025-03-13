@@ -1,7 +1,7 @@
 # minceraftOS
 
 OS that uses Minceraft as Desktop Environment. \
-Now it only starts minceraft and do nothing.
+Now it only launches minceraft and does nothing.
 
 ## Download iso file
 
