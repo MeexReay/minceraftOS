@@ -61,4 +61,4 @@ Maybe one day there will be a terminal blocks that can run commands and start xo
 - [ ] Add reboot button (idk where)
 - [ ] Remove realms button or maybe change it to something
 - [ ] Make language in game changes locale
-- [ ] Make autologin to root so it makes simple to poweroff or reboot computer
+- [ ] Make autologin to root so it makes simple doing poweroff or reboot computer
