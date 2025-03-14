@@ -1,0 +1,4 @@
+
+[submodule "ultimmc"]
+	path = ultimmc
+	url = https://github.com/UltimMC/Launcher
