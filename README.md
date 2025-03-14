@@ -31,11 +31,13 @@ Finally, you can forget all above and use just `sudo make`
 
 ## How to burn it on disk
 
-First link in google bro
+To burn iso:
 
 ```
-sudo dd if=<input_file> of=<device_name> status=progress
+sudo dd if=/path/to/minceraftOS.iso of=/dev/<disk_id> status=progress
 ```
+
+Use `lsblk` to find out your `disk_id` (ex. sda)
 
 ## How to use
 
