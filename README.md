@@ -3,35 +3,49 @@
 OS that uses Minceraft as a Desktop Environment. \
 Now it only starts minceraft and does nothing.
 
-## How to make iso file
+## How to make ISO file
 
-You need to do this from Void Linux (because the script needs XBPS to build)!
+### Preparing minceraft
 
-At first, compile ultimmc and load minceraft assets:
+At first, you need to prepare minceraft.
+
+Minceraft preparing consists of 5 steps:
+
+- Copying UltimMC configs to `data/mine` dir
+- Building and copying mods to MC instance
+- Compiling UltimMC from source (if you want to skip this step, you only need to copy built release of UltimMC to `ultimmc/build` directory)
+- Downloading assets and libraries (just launches instance in online mode)
+- Copying UltimMC configs again
+
+Use `mkmine.sh` to do all this automatically:
 
 ```
-make ultimmc
+./mkmine.sh
 
-# it will start game to load assets,
-# you just need to close the window when it will open
+# IMPORTANT: if you get java selection window, choose Java 21
 ```
 
-Use `mkmine.sh` script to make ISO file. \
-Result will be in `output/` directory. \
+### Creating ISO file
+
+Use `mkiso.sh` script to create ISO file. Result will be in `output/` directory.
+
 Script compiles it only for x86_64, but I think it's not really hard to make it compile for any other architecture
 
+This script only work on Void Linux (because the script needs XBPS to build)!
+
 ```
-sudo ./mkmine.sh
-sudo make iso # the same but also prepares launcher
+sudo ./mkiso.sh
 
 # idk why it needs sudo, please pr if you know how to remove it
 ```
 
-Finally, you can forget all above and use just `sudo make`
+### One-liner
 
-## How to burn it on disk
+Finally, you can forget all above and use just `[ -d data/mine ] || ./mkmine.sh; sudo ./mkiso.sh`
 
-To burn iso:
+## How to burn ISO on disk
+
+To burn iso use:
 
 ```
 sudo dd if=/path/to/minceraftOS.iso of=/dev/<disk_id> status=progress
@@ -53,7 +67,7 @@ Maybe one day there will be a terminal blocks that can run commands and start xo
 - [x] Disable TTY and install plymouth
 - [x] Launch minceraft at startup
 - [ ] Add color support to terminal emulator
-- [ ] Create minceraftOS logo
+- [x] Create minceraftOS logo
 - [ ] Add logo to plymouth and game
 - [ ] Network settings in game settings
 - [ ] Remove some options in game settings (fullscreen)
@@ -62,4 +76,4 @@ Maybe one day there will be a terminal blocks that can run commands and start xo
 - [ ] Remove realms button or maybe change it to something
 - [ ] Make language in game changes locale
 - [ ] Make autologin to root so it makes simple doing poweroff or reboot computer
-- [ ] Make saving system or make it be able to install on real hardware 
+- [ ] Remove squashfs (or make parameter that disables it)
