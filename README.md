@@ -37,6 +37,7 @@ First link in google bro
 sudo dd if=<input_file> of=<device_name> status=progress
 ```
 
-## How to play minceraft
+## How to use
 
-IDK bro just do what you want that's it
+IDK bro just do what you want that's it \
+You can use creative worlds as workspaces, books as files and chests as directories XD
