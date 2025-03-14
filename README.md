@@ -1,6 +1,6 @@
 # minceraftOS
 
-OS that uses Minceraft as Desktop Environment. \
+OS that uses Minceraft as a Desktop Environment. \
 Now it only starts minceraft and do nothing.
 
 ## How to make iso file
