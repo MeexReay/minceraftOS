@@ -1,4 +1,4 @@
 xsetroot -cursor_name arrow
-cd /home/player/minceraft
+cd /home/player/mine
 exec ./run_mine.sh
 
