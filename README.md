@@ -1,7 +1,7 @@
 # minceraftOS
 
-OS that uses Minceraft as Desktop Environment. \
-Now it only starts minceraft and do nothing.
+OS that uses Minceraft as a Desktop Environment. \
+Now it only starts minceraft and does nothing.
 
 ## How to make iso file
 
@@ -31,12 +31,35 @@ Finally, you can forget all above and use just `sudo make`
 
 ## How to burn it on disk
 
-First link in google bro
+To burn iso:
 
 ```
-sudo dd if=<input_file> of=<device_name> status=progress
+sudo dd if=/path/to/minceraftOS.iso of=/dev/<disk_id> status=progress
 ```
 
-## How to play minceraft
+To find out your `<disk_id>` (ex. sda), use `lsblk` or `fdisk -l`
 
-IDK bro just do what you want that's it
+## How to use
+
+IDK bro just do what you want that's it \
+You can use creative worlds as workspaces, books as files and chests as directories XD. \
+Maybe one day there will be a terminal blocks that can run commands and start xorg windows!
+
+## Roadmap
+
+- [ ] Change name of os everywhere
+- [ ] Terminal emulator (monitor) block
+- [ ] View xorg windows on monitor block
+- [x] Disable TTY and install plymouth
+- [x] Launch minceraft at startup
+- [ ] Add color support to terminal emulator
+- [ ] Create minceraftOS logo
+- [ ] Add logo to plymouth and game
+- [ ] Network settings in game settings
+- [ ] Remove some options in game settings (fullscreen)
+- [ ] Make quit button shutdown computer
+- [ ] Add reboot button (idk where)
+- [ ] Remove realms button or maybe change it to something
+- [ ] Make language in game changes locale
+- [ ] Make autologin to root so it makes simple doing poweroff or reboot computer
+- [ ] Make saving system or make it be able to install on real hardware 
