@@ -37,7 +37,7 @@ To burn iso:
 sudo dd if=/path/to/minceraftOS.iso of=/dev/<disk_id> status=progress
 ```
 
-Use `lsblk` to find out your `disk_id` (ex. sda)
+To find out your `disk_id` (ex. sda), use `lsblk` or `fdisk -l`
 
 ## How to use
 
