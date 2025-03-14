@@ -37,10 +37,28 @@ To burn iso:
 sudo dd if=/path/to/minceraftOS.iso of=/dev/<disk_id> status=progress
 ```
 
-To find out your `disk_id` (ex. sda), use `lsblk` or `fdisk -l`
+To find out your `<disk_id>` (ex. sda), use `lsblk` or `fdisk -l`
 
 ## How to use
 
 IDK bro just do what you want that's it \
 You can use creative worlds as workspaces, books as files and chests as directories XD. \
 Maybe one day there will be a terminal blocks that can run commands and start xorg windows!
+
+## Roadmap
+
+- [ ] Change name of os everywhere
+- [ ] Terminal emulator (monitor) block
+- [ ] View xorg windows on monitor block
+- [x] Disable TTY and install plymouth
+- [x] Launch minceraft at startup
+- [ ] Add color support to terminal emulator
+- [ ] Create minceraftOS logo
+- [ ] Add logo to plymouth and game
+- [ ] Network settings in game settings
+- [ ] Remove some options in game settings (fullscreen)
+- [ ] Make quit button shutdown computer
+- [ ] Add reboot button (idk where)
+- [ ] Remove realms button or maybe change it to something
+- [ ] Make language in game changes locale
+- [ ] Make autologin to root so it makes simple to poweroff or reboot computer
