@@ -10,6 +10,7 @@ clean:
 	cp data/minceraft_tmp/ultimmc.cfg.def data/minceraft
 	cp -r data/minceraft_tmp/instances data/minceraft
 	cp data/minceraft_tmp/run_mine.sh data/minceraft
+	cp data/minceraft_tmp/accounts.json data/minceraft
 	rm -rf data/minceraft_tmp
 	rm -rf ultimmc/build
 
@@ -17,7 +18,7 @@ ultimmc: data/minceraft/UltimMC
 
 data/minceraft/UltimMC:
 	mkdir -p ultimmc/build
-	cd ultimmc/build && cmake \
+	export JAVA_HOME=/usr/lib/jvm/openjdk8 && cd ultimmc/build && cmake \
 		-DCMAKE_C_COMPILER=/usr/bin/gcc \
 		-DCMAKE_CXX_COMPILER=/usr/bin/g++ \
 		-DCMAKE_BUILD_TYPE=Release \
