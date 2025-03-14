@@ -1,6 +1,6 @@
-Logging started at 2025-03-12T20:00:28.230448162Z
+Logging started at 2025-03-14T01:16:18.022394035Z
 [authlib-injector] [INFO] Version: 1.2.5
-[authlib-injector] [INFO] Authentication server: http://127.0.0.1:43699
+[authlib-injector] [INFO] Authentication server: http://127.0.0.1:42059
 [authlib-injector] [WARNING] You are using HTTP protocol, which is INSECURE! Please switch to HTTPS if possible.
 [authlib-injector] [INFO] Transformed [net.minecraft.client.main.Main] with [Main Arguments Transformer]
 [authlib-injector] [INFO] Transformed [com.mojang.authlib.properties.Property] with [Yggdrasil Public Key Transformer]
