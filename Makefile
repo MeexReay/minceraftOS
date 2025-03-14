@@ -38,7 +38,7 @@ data/minceraft/UltimMC:
 	chmod 777 data/minceraft -R
 	echo "CLOSE MINECRAFT WHEN ASSETS ARE LOADED!!"
 	cp data/minceraft/ultimmc.cfg.def data/minceraft/ultimmc.cfg
-	cd data/minceraft && ./UltimMC -o -n Steve -l 1.21.4
+	cd data/minceraft && ./UltimMC -l 1.21.4 || true	
 	cp data/minceraft/ultimmc.cfg.def data/minceraft/ultimmc.cfg
 
 iso: data/minceraft/UltimMC
