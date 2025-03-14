@@ -31,7 +31,7 @@ Use `mkiso.sh` script to create ISO file. Result will be in `output/` directory.
 
 Script compiles it only for x86_64, but I think it's not really hard to make it compile for any other architecture
 
-This script only work on Void Linux (because the script needs XBPS to build)!
+This script only work on Void Linux (because it needs XBPS).
 
 ```
 sudo ./mkiso.sh
