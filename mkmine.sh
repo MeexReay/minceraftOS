@@ -505,7 +505,7 @@ fi
 
 trap 'error_out $? $LINENO' INT TERM 0
 
-BUILDDIR="/home/user/Source/minceraftOS/build"
+BUILDDIR="./build"
 rm -rf $BUILDDIR
 IMAGEDIR="$BUILDDIR/image"
 ROOTFS="$IMAGEDIR/rootfs"
