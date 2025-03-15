@@ -895,7 +895,7 @@ fi
 
 mkdir -p output
 
-: ${OUTPUT_FILE="output/minceraftOS-$MOSVER-$(date '+%Y-%m-%d_%H:%M:%S').iso"}
+: ${OUTPUT_FILE="output/minceraftOS-$MOSVER-$(date '+%Y-%m-%d').iso"}
 
 print_step "Installing software to generate the image: ${REQUIRED_PKGS[*]} ..."
 install_prereqs "${REQUIRED_PKGS[@]}"
