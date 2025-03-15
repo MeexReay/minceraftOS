@@ -13,4 +13,4 @@ for dir in */; do
     fi
 done
 
-cp fabric-api*.jar build/
+curl -o build/fabric-api.jar https://cdn.modrinth.com/data/P7dR8mSH/versions/IXeiAH6H/fabric-api-0.118.5%2B1.21.4.jar
