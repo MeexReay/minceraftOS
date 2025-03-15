@@ -68,12 +68,13 @@ Maybe one day there will be a terminal blocks that can run commands and start xo
 - [x] Launch minceraft at startup
 - [ ] Add color support to terminal emulator
 - [x] Create minceraftOS logo
-- [ ] Add logo to plymouth and game
+- [x] Add logo to game
+- [ ] Add logo to plymouth
 - [ ] Network settings in game settings
 - [ ] Remove some options in game settings (fullscreen)
-- [ ] Make quit button shutdown computer
-- [ ] Add reboot button (idk where)
-- [ ] Remove realms button or maybe change it to something
+- [x] Make quit button shutdown computer
+- [x] Add reboot button (idk where)
+- [x] Remove realms button or maybe change it to something
 - [ ] Make language in game changes locale
 - [ ] Make autologin to root so it makes simple doing poweroff or reboot computer
 - [ ] Remove squashfs (or make parameter that disables it)
