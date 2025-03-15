@@ -41,7 +41,7 @@ sudo ./mkiso
 
 ### One-liner
 
-Finally, you can forget all above and use just `[ -d data/mine ] || ./mkmine.sh; sudo ./mkiso.sh`
+Finally, you can forget all above and use just `[ -d data/mine ] || ./mkmine; sudo ./mkiso`
 
 ## How to burn ISO to disk
 
