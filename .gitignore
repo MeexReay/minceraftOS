@@ -5,6 +5,7 @@
 *.tar.gz
 *.box
 *.log
+mods/build/
 ultimmc/build/
 data/mine/
 output/
