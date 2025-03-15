@@ -17,24 +17,24 @@ Minceraft preparing consists of 5 steps:
 - Downloading assets and libraries (just launches instance in online mode)
 - Copying UltimMC configs again
 
-Use `mkmine.sh` to do all this automatically:
+Use `mkmine` to do all this automatically:
 
 ```
-./mkmine.sh
+./mkmine
 
 # IMPORTANT: if you get java selection window, choose Java 21
 ```
 
 ### Creating ISO file
 
-Use `mkiso.sh` script to create ISO file. Result will be in `output/` directory.
+Use `mkiso` script to create ISO file. Result will be in `output/` directory.
 
 Script compiles it only for x86_64, but I think it's not really hard to make it compile for any other architecture
 
 This script only work on Void Linux (because it needs XBPS).
 
 ```
-sudo ./mkiso.sh
+sudo ./mkiso
 
 # idk why it needs sudo, please pr if you know how to remove it
 ```
@@ -43,15 +43,17 @@ sudo ./mkiso.sh
 
 Finally, you can forget all above and use just `[ -d data/mine ] || ./mkmine.sh; sudo ./mkiso.sh`
 
-## How to burn ISO on disk
+## How to burn ISO to disk
 
-To burn iso use:
+To burn live-cd iso to disk use:
 
 ```
 sudo dd if=/path/to/minceraftOS.iso of=/dev/<disk_id> status=progress
 ```
 
 To find out your `<disk_id>` (ex. sda), use `lsblk` or `fdisk -l`
+
+Now there is no read-write mode, only live-cd
 
 ## How to use
 
