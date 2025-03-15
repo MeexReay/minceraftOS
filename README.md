@@ -3,6 +3,32 @@
 OS that uses Minceraft as a Desktop Environment. \
 Now it only starts minceraft and does nothing.
 
+## Screenshots
+
+Title Menu
+
+![image](https://github.com/user-attachments/assets/6895b0e6-5770-4144-82e5-68b5c87284b2)
+
+## How to use
+
+IDK bro just do what you want that's it \
+You can use creative worlds as workspaces, books as files and chests as directories XD. \
+Maybe one day there will be a terminal blocks that could run commands and start xorg windows!
+
+## How to burn ISO to disk
+
+Precompiled images: [Latest release](https://github.com/MeexReay/minceraftOS/releases/tag/latest)
+
+To burn live-cd iso to disk use:
+
+```
+sudo dd if=/path/to/minceraftOS.iso of=/dev/<disk_id> status=progress
+```
+
+To find out your `<disk_id>` (ex. sda), use `lsblk` or `fdisk -l`
+
+For now, there is no read-write mode, only live-cd
+
 ## How to make ISO file
 
 ### Preparing minceraft
@@ -27,7 +53,7 @@ Use `mkmine` to do all this automatically:
 
 ### Creating ISO file
 
-Use `mkiso` script to create ISO file. Result will be in `output/` directory.
+Use `mkiso` script to create ISO file. Result will be in the `output/` directory.
 
 Script compiles it only for x86_64, but I think it's not really hard to make it compile for any other architecture
 
@@ -42,24 +68,6 @@ sudo ./mkiso
 ### One-liner
 
 Finally, you can forget all above and use just `[ -d data/mine ] || ./mkmine; sudo ./mkiso`
-
-## How to burn ISO to disk
-
-To burn live-cd iso to disk use:
-
-```
-sudo dd if=/path/to/minceraftOS.iso of=/dev/<disk_id> status=progress
-```
-
-To find out your `<disk_id>` (ex. sda), use `lsblk` or `fdisk -l`
-
-For now, there is no read-write mode, only live-cd
-
-## How to use
-
-IDK bro just do what you want that's it \
-You can use creative worlds as workspaces, books as files and chests as directories XD. \
-Maybe one day there will be a terminal blocks that can run commands and start xorg windows!
 
 ## Roadmap
 
