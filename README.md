@@ -17,7 +17,7 @@ Maybe one day there will be a terminal blocks that could run commands and start 
 
 ## How to burn ISO to disk
 
-Precompiled images: [Latest release](https://github.com/MeexReay/minceraftOS/releases/tag/latest)
+Precompiled images: [Latest release](https://github.com/MeexReay/minceraftOS/releases/latest)
 
 To burn live-cd iso to disk use:
 
