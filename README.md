@@ -53,7 +53,7 @@ sudo dd if=/path/to/minceraftOS.iso of=/dev/<disk_id> status=progress
 
 To find out your `<disk_id>` (ex. sda), use `lsblk` or `fdisk -l`
 
-Now there is no read-write mode, only live-cd
+For now, there is no read-write mode, only live-cd
 
 ## How to use
 
