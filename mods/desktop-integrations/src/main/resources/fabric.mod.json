@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "desktop-integrations",
+	"version": "${version}",
+	"name": "desktop-integrations",
+	"description": "Desktop Integrations",
+	"authors": [
+		"TheMixRay"
+	],
+	"contact": {
+		"homepage": "https://github.com/MeexReay/minceraftOS"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/desktop-integrations/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"ru.themixray.DesktopIntegrations"
+		],
+		"client": [
+			"ru.themixray.DesktopIntegrationsClient"
+		]
+	},
+	"mixins": [
+		"desktop-integrations.mixins.json",
+		{
+			"config": "desktop-integrations.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

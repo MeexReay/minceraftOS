@@ -70,7 +70,7 @@ function create_mine_dir {
   wrap_pwd copy_mine_data
   wrap_pwd build_mods
   rm -rf data/mine/instances/default/.minecraft/mods
-  cp mods/build data/mine/instances/default/.minecraft/mods
+  cp -r mods/build data/mine/instances/default/.minecraft/mods
   wrap_pwd build_ultimmc
   cp -a ultimmc/build/. data/mine
   chmod 777 data/mine -R

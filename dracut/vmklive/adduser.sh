@@ -36,9 +36,11 @@ if [ -f ${NEWROOT}/etc/sudoers ]; then
     echo "${USERNAME} ALL=(ALL:ALL) NOPASSWD: ALL" > "${NEWROOT}/etc/sudoers.d/99-void-live"
 fi
 
-echo "${USERNAME} minceraftos = (root) NOPASSWD: /usr/bin/poweroff" > "${NEWROOT}/etc/sudoers.d/99-void-live"
-echo "${USERNAME} minceraftos = (root) NOPASSWD: /usr/sbin/startx" > "${NEWROOT}/etc/sudoers.d/99-void-live"
-echo "${USERNAME} minceraftos = (root) NOPASSWD: /usr/bin/plymouth" > "${NEWROOT}/etc/sudoers.d/99-void-live"
+echo "${USERNAME} minceraftos = (root) NOPASSWD: /usr/bin/poweroff
+${USERNAME} minceraftos = (root) NOPASSWD: /usr/bin/reboot
+${USERNAME} minceraftos = (root) NOPASSWD: /usr/sbin/startx
+${USERNAME} minceraftos = (root) NOPASSWD: /usr/bin/plymouth" > "${NEWROOT}/etc/sudoers.d/99-void-live"
+
 if [ -d ${NEWROOT}/etc/polkit-1 ]; then
     # If polkit is installed allow users in the wheel group to run anything.
     cat > ${NEWROOT}/etc/polkit-1/rules.d/void-live.rules <<_EOF
