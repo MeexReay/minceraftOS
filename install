@@ -1,0 +1,34 @@
+#!/bin/bash
+
+if [[ $EUID -ne 0 ]]; then
+   echo "This script must be run as root" 
+   exit 1
+fi
+
+IMAGE_FILE=$1
+DISK_FILE=$2
+
+mkdir -p build
+cp $IMAGE_FILE build/live_cd.iso
+
+isohybrid --partok build/live_cd.iso
+
+echo "Partitioning $DISK_FILE..."
+
+wipefs -a "$DISK_FILE"
+
+parted -s "$DISK_FILE" mklabel msdos
+
+parted -s "$DISK_FILE" mkpart primary ext4 2048s 1G
+parted -s "$DISK_FILE" set 1 boot on
+
+parted -s "$DISK_FILE" mkpart primary ext4 1G 100%
+
+fdisk -l "$DISK_FILE"
+
+echo "Partitioning complete."
+
+mkfs -t ext4 "$DISK_FILE"
+
+dd if=build/live_cd.iso of="$DISK_FILE" bs=1M status=progress
+dd if=/usr/lib/syslinux/mbr.bin of="$DISK_FILE" status=progress
