@@ -1,6 +1,6 @@
 # How to add extra mods
 
-Important: we use Fabric Loader by default, if you want to change it to another loader, read `How to change MC version or loader` section below.
+Important: we use Fabric Loader by default, if you want to change it to another one, read `How to change MC version or loader` section below.
 
 ## Building mod from source
 
