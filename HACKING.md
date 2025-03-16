@@ -35,6 +35,7 @@ cp /path/to/your-mod.jar .
 
 To change version or loader of Minceraft, edit `mine-data/mmc-pack.json` file.
 You can generate it with MultiMC or PrismLauncher, and just copy.
+If you are changing the loader, you might also want to remove existing fabric mods, they are located in the `mods/` folders. 
 
 # How to change my nickname
 
