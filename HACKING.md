@@ -1,6 +1,6 @@
 # How to add extra mods
 
-Important: we use Fabric Loader by default, if you want to change it to another one, read `How to change MC version or loader` section below.
+Important: we use Fabric Loader by default, if you want to change it to another one, read [section below](https://github.com/MeexReay/minceraftOS/blob/main/HACKING.md#how-to-change-mc-version-or-loader).
 
 ## Building mod from source
 
