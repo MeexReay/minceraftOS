@@ -1,7 +1,8 @@
 # minceraftOS
 
 OS that uses Minceraft as a Desktop Environment. \
-Now it only starts minceraft and does nothing.
+Now it only starts minceraft and does nothing. \
+Based on [void-mklive](https://github.com/void-linux/void-mklive) repository
 
 ## Screenshots
 
