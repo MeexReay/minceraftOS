@@ -1,5 +1,8 @@
 # How to build ISO file
 
+> [!IMPORTANT]  
+> Creating an ISO file requires to be Void Linux installed, if you dont want to install Void Linux, you should use [Docker](https://www.docker.com) (docker pull voidlinux/voidlinux).
+
 ## Preparing minceraft
 
 At first, you need to prepare minceraft.
